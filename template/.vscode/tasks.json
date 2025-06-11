@@ -1,0 +1,68 @@
+{
+    "tasks": [
+        {
+            "label": "c_cpp_build",
+            "type": "shell",
+            "command": "${workspaceFolder}/.vscode/c_cpp_build.sh",
+            "args": [
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
+        {
+            "label": "Build and Run Current File",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "${relativeFileDirname}/${fileBasenameNoExtension}",
+                "&&",
+                "./${relativeFileDirname}/${fileBasenameNoExtension}.out"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+
+        {
+            "label": "Run Current File",
+            "type": "shell",
+            "command": "./${relativeFileDirname}/${fileBasenameNoExtension}.out",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        }
+
+    ],
+    "version": "2.0.0"
+}

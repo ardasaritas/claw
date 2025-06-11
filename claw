@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+# Helper function for colored output
+info() { echo -e "🐾 \033[1;32m$1\033[0m"; }
+
+# Require correct usage
+if [[ "$1" != "init" ]] || [[ -z "$2" ]]; then
+  echo "Usage: claw init <target-folder>"
+  exit 1
+fi
+
+TARGET="$2"
+
+info "Setting up C project in: $TARGET"
+mkdir -p "$TARGET"
+cp -R "$(dirname "$0")/template/." "$TARGET"
+
+info "✅ Setup complete!"
+echo "Run the following:"
+echo "  cd $TARGET"
+echo "  chmod +x .vscode/c_cpp_build.sh"
+echo "  code ."
