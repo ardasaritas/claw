@@ -29,7 +29,7 @@ Makefile
 main.cpp
 ```
 
-You can open the folder in VSCode and immediately press **F5** to build and run your C code.
+You can open the folder in VSCode and immediately start building, running, debugging your C code. 
 
 ---
 
