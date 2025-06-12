@@ -136,6 +136,7 @@ You are done, customize it as you wish by changing the "key" field.
 | `Cmd + P` | Open file |
 
 (You can learn many more) 
+
 ---
 
 ## 🐞 Debugging: I can't see my `printf()` output after `scanf()`
