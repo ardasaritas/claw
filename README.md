@@ -26,7 +26,7 @@ Creates the following inside `my-project/`:
 ├── settings.json
 ├── extensions.json
 Makefile
-main.c (optional)
+main.cpp
 ```
 
 You can open the folder in VSCode and immediately press **F5** to build and run your C code.
