@@ -78,7 +78,8 @@ cd <folder>
 chmod +x .vscode/c_cpp_build.sh
 code .
 ```
-as will be highlighted when initialization command is executed. Just copy and paste, then click enter. 
+These commands will also show up as Next Steps when you initialize the folder with claw. 
+Just copy and paste, then click enter. 
 (Change <folder> with the name you'd like for your root folder. For instance, CTIS151)
 
 ---
