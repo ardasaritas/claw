@@ -76,8 +76,16 @@ claw init <folder>
 ## 🚀 Quick Start
 
 ```bash
-claw init myproject
+claw init <folder>
 ```
+then 
+```bash
+cd <folder>
+chmod +x .vscode/c_cpp_build.sh
+code .
+```
+as will be highlighted when initialization command is executed. Just copy and paste, then click enter. 
+(Change <folder> with the name you'd like for your root folder. For instance, CTIS151)
 
 ---
 
