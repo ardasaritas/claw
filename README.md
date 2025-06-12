@@ -88,12 +88,12 @@ Just copy and paste, then click enter.
 
 | File | Purpose |
 |:-|:-|
-| `.vscode/tasks.json` | Compiles the active file using `clang` or `clang++` |
-| `.vscode/launch.json` | Launches the compiled output with LLDB |
+| `.vscode/tasks.json` | Initializes tasks for building, running, debugging, and cleaning |
+| `.vscode/launch.json` | Launches the compiled output with LLDB for debugging|
 | `.vscode/c_cpp_properties.json` | Sets include paths, standards, and architecture |
 | `.vscode/settings.json` | Enables squiggles and IntelliSense hints |
-| `Makefile` | (Optional) terminal-based build |
-| `main.c` | (Optional) Hello World for testing |
+| `Makefile` | Terminal-based build |
+| `main.cpp` | Hello World for testing |
 
 ---
 
@@ -103,7 +103,8 @@ To initialize Run, Build, and Clean shortcuts:
     Hit `Cmd + Shift + P` then type "Preferences: Open Keyboard Shortcuts (JSON)"
     Click `enter`, and paste the following: 
     
-    `// Place your key bindings in this file to override the defaults
+    ```
+    // Place your key bindings in this file to override the defaults
     [
         {
             "key": "cmd+shift+r",
@@ -122,9 +123,9 @@ To initialize Run, Build, and Clean shortcuts:
             "command": "workbench.action.tasks.runTask",
             "args": "Clean"
         }
-    ]`
-    
-    You are done, customize it as you wish by changing the "key" field. 
+    ]
+    ```
+You are done, customize it as you wish by changing the "key" field. 
     
 | Shortcut | Action |
 |:-|:-|
