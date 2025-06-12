@@ -34,7 +34,7 @@ if command -v code >/dev/null 2>&1; then
 else
   warn "VSCode CLI not found. To enable it:"
   echo "  Open VSCode → Press Cmd+Shift+P → 'Shell Command: Install code in PATH'"
-  echo "Then re-run with the extensions desired: code --install-extension ms-vscode.cpptools ..."
+  echo "  Then re-run with the extensions desired: code --install-extension ms-vscode.cpptools ..."
 fi
 
 echo
