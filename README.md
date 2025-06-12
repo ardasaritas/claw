@@ -61,7 +61,7 @@ Before using `claw`, make sure you have:
 ## 🍺 Installation via Homebrew
 
 ```bash
-brew tap ardasaritas/clawtap
+brew tap ardasaritas/claw
 brew install claw
 ```
 
