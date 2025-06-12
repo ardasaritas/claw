@@ -103,7 +103,6 @@ To initialize Run, Build, and Clean shortcuts:
     Hit `Cmd + Shift + P` then type "Preferences: Open Keyboard Shortcuts (JSON)"
     Click `enter`, and paste the following: 
     
-    ```
     // Place your key bindings in this file to override the defaults
     [
         {
@@ -124,7 +123,7 @@ To initialize Run, Build, and Clean shortcuts:
             "args": "Clean"
         }
     ]
-    ```
+
 You are done, customize it as you wish by changing the "key" field. 
     
 | Shortcut | Action |
