@@ -32,7 +32,6 @@ fi
 # Check compilation success
 if [[ $? -eq 0 ]]; then
     echo "✅ Build successful. Executable created: $basename.out"
-    echo -e "💻 Running the executable...\n\n"
 else
     echo "❌ Build failed."
     exit 3

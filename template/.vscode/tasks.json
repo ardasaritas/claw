@@ -20,13 +20,11 @@
         },
 
         {
-            "label": "Build and Run Current File",
+            "label": "Build Current File",
             "type": "shell",
             "command": "make",
             "args": [
-                "${relativeFileDirname}/${fileBasenameNoExtension}",
-                "&&",
-                "./${relativeFileDirname}/${fileBasenameNoExtension}.out"
+                "${relativeFileDirname}/${fileBasenameNoExtension}"
             ],
             "problemMatcher": [],
             "group": {
