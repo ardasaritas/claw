@@ -14,7 +14,17 @@ TARGET="$2"
 
 info "Setting up C project in: $TARGET"
 mkdir -p "$TARGET"
-cp -R "$(dirname "$0")/template/." "$TARGET"
+
+# Determine template path
+if [ -d "$(brew --prefix claw)/share/claw/template" ]; then
+  TEMPLATE_DIR="$(brew --prefix claw)/share/claw/template"
+else
+  TEMPLATE_DIR="$(dirname "$0")/template"
+fi
+
+# Copy project template
+cp -R "$TEMPLATE_DIR/." "$TARGET"
+
 
 info "✅ Setup complete!"
 
