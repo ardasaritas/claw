@@ -155,13 +155,7 @@ This is a common issue when debugging C programs using LLDB on macOS.
 
 ### ✅ Solution:
 
-At the beginning of `main()`:
-
-```c
-setvbuf(stdout, NULL, _IOLBF, 0); // force line-buffered output
-```
-
-Or manually flush:
+Manually flush after every printf() statement:
 
 ```c
 printf("You entered: %d\n", a);
