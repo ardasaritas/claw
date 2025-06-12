@@ -77,9 +77,6 @@ claw init <folder>
 
 ```bash
 claw init myproject
-cd myproject
-chmod +x .vscode/c_cpp_build.sh
-code .
 ```
 
 ---
