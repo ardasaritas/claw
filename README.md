@@ -189,6 +189,40 @@ Claw supports both `.c` and `.cpp`.
 
 ---
 
+---
+
+## 🔄 Updating Claw
+
+To upgrade Claw to the latest version:
+
+```bash
+brew update
+brew upgrade claw
+```
+
+You can verify the installed version:
+
+```bash
+brew list --versions claw
+```
+
+If you haven’t tapped the repo yet:
+
+```bash
+brew tap ardasaritas/claw
+```
+
+---
+
+## 🧹 Uninstalling Claw
+
+To remove Claw completely from your system:
+
+```bash
+brew uninstall claw
+brew untap ardasaritas/claw
+```
+
 ## 📜 License
 
 MIT © Arda Sarıtaş  
