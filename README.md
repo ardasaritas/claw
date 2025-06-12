@@ -20,11 +20,11 @@ Creates the following inside `my-project/`:
 
 ```
 .vscode/
-├── tasks.json
-├── launch.json
+├── c_cpp_build.sh
 ├── c_cpp_properties.json
+├── launch.json
 ├── settings.json
-├── extensions.json
+└── tasks.json
 Makefile
 main.cpp
 ```
