@@ -65,12 +65,6 @@ brew tap ardasaritas/clawtap
 brew install claw
 ```
 
-Then you can run:
-
-```bash
-claw init <folder>
-```
-
 ---
 
 ## 🚀 Quick Start
