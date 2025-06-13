@@ -80,7 +80,7 @@ code .
 ```
 These commands will also show up as Next Steps when you initialize the folder with claw. 
 Just copy and paste, then click enter. 
-(Change <folder> with the name you'd like for your root folder. For instance, CTIS151)
+(Change `<folder>` with the name you'd like for your root folder. For instance, CTIS151)
 
 ---
 
