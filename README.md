@@ -13,10 +13,10 @@ It sets up a complete, fully functional Visual Studio Code workspace for C or C+
 ## 📦 What It Does
 
 ```bash
-claw init my-project/
+claw init <folder>
 ```
 
-Creates the following inside `my-project/`:
+Creates the following inside `<folder>`:
 
 ```
 .vscode/
@@ -80,7 +80,7 @@ code .
 ```
 These commands will also show up as Next Steps when you initialize the folder with claw. 
 Just copy and paste, then click enter. 
-(Change `<folder>` with the name you'd like for your root folder. For instance, CTIS151)
+(Change `<folder>` with the name you'd like for your root folder. For instance, claw init CTIS151)
 
 ---
 
