@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Helper function for colored output
+info() { echo -e "🐾 \033[1;32m$1\033[0m"; }
+warn() { echo -e "⚠️  \033[1;33m$1\033[0m"; }
+
+# Require correct usage
+if [[ "$1" != "init" ]] || [[ -z "$2" ]]; then
+  echo "Usage: claw init <target-folder>"
+  exit 1
+fi
+
+TARGET="$2"
+
+info "Setting up C project in: $TARGET"
+mkdir -p "$TARGET"
+
+# Determine template path
+if [ -d "$(brew --prefix claw)/share/claw/template" ]; then
+  TEMPLATE_DIR="$(brew --prefix claw)/share/claw/template"
+else
+  TEMPLATE_DIR="$(dirname "$0")/template"
+fi
+
+# Copy project template
+cp -R "$TEMPLATE_DIR/." "$TARGET"
+
+
+info "✅ Setup complete!"
+
+# Try installing extensions if 'code' is available
+if command -v code >/dev/null 2>&1; then
+  info "Installing recommended VSCode extensions..."
+  code --install-extension ms-vscode.cpptools >/dev/null 2>&1
+  code --install-extension ms-vscode.cpptools-extension-pack >/dev/null 2>&1
+  code --install-extension ms-vscode.cpptools-themes >/dev/null 2>&1
+  code --install-extension ms-vscode.makefile-tools >/dev/null 2>&1
+  code --install-extension github.github-vscode-theme >/dev/null 2>&1
+  code --install-extension yzhang.markdown-all-in-one >/dev/null 2>&1
+  code --install-extension tomoki1207.pdf >/dev/null 2>&1
+  code --install-extension adpyke.codesnap >/dev/null 2>&1
+  code --install-extension pixl-garden.bongocat >/dev/null 2>&1
+  info "✅ Extensions installed."
+else
+  warn "VSCode CLI not found. To enable it:"
+  echo "  Open VSCode → Press Cmd+Shift+P → 'Shell Command: Install code in PATH'"
+  echo "  Then re-run with the extensions desired: code --install-extension ms-vscode.cpptools ..."
+fi
+
+echo
+info "Next steps:"
+echo "➡️ cd $TARGET"
+echo "   chmod +x .vscode/c_cpp_build.sh"
+echo "   code ."
