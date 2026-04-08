@@ -10,6 +10,12 @@ It sets up a complete, fully functional Visual Studio Code workspace for C or C+
 
 ---
 
+## Usage
+
+
+https://github.com/user-attachments/assets/25c16a4e-377d-4c0e-8bfb-0c7de1557a89
+
+
 ## What It Does
 
 ```bash
